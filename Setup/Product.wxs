@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define AppLaunchPoCMainApp_TargetDir=$(var.AppLaunchPoCMainApp.TargetDir)?>
+	<Product Id="*" Name="Setup" Language="1033" Version="1.0.0.0" Manufacturer="josh" UpgradeCode="c8e6a809-f8ea-4d2a-83e0-dc6f3c4cd5ed">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="Setup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+		
+		
+		
+		
+		
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Setup" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="ProductComponent" Guid="">
+				
+				<!--<File Source="$(var.AppLaunchPoCMainApp.TargetPath)" />-->
+				<RegistryKey Root="HKCR" Key="customProtocol">
+					<RegistryValue Type="string" Name="URL Protocol" Value="" />
+					<RegistryValue Type="string" Value="URL:customProtocol" />
+					<RegistryKey Key="DefaultIcon">
+						<RegistryValue Type="string" Value="AppLaunchPoCMainApp.exe" />
+					</RegistryKey>
+					<RegistryKey Key="shell\open\command">
+						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]AppLaunchPoCMainApp.exe&quot; &quot;%1&quot;" />
+					</RegistryKey>
+				</RegistryKey>
+			</Component>
+			<Component Id="AppLaunchPoCMainApp.dll" Guid="">
+			  <File Id="AppLaunchPoCMainApp_.dll" Name="AppLaunchPoCMainApp.dll" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.dll" />
+			</Component>
+			<Component Id="AppLaunchPoCMainApp.runtimeconfig.json" Guid="">
+			  <File Id="AppLaunchPoCMainApp.runtimeconfig.json" Name="AppLaunchPoCMainApp.runtimeconfig.json" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.runtimeconfig.json" />
+			</Component>
+			
+			
+			
+		</ComponentGroup>
+	</Fragment>
+</Wix>

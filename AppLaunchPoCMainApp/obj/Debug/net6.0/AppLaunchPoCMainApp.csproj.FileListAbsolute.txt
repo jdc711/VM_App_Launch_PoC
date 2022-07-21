@@ -1,0 +1,15 @@
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.exe
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.deps.json
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.runtimeconfig.json
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.dll
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.pdb
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.csproj.AssemblyReference.cache
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.AssemblyInfoInputs.cache
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.AssemblyInfo.cs
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.csproj.CoreCompileInputs.cache
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.dll
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\refint\AppLaunchPoCMainApp.dll
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.pdb
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\AppLaunchPoCMainApp.genruntimeconfig.cache
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\obj\Debug\net6.0\ref\AppLaunchPoCMainApp.dll
