@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define AppLaunchPoCMainApp_TargetDir=$(var.AppLaunchPoCMainApp.TargetDir)?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define AppLaunchPoCMainApp_TargetDir=$(var.AppLaunchPoCMainApp.TargetDir)?><?define WinApp_TargetDir=$(var.WinApp.TargetDir)?>
 	<Product Id="*" Name="Setup" Language="1033" Version="1.0.0.0" Manufacturer="josh" UpgradeCode="c8e6a809-f8ea-4d2a-83e0-dc6f3c4cd5ed">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
@@ -31,11 +31,9 @@
 			<!-- </Component> -->
 			<Component Id="ProductComponent" Guid="{206C911C-56EF-44B8-9257-5FD214427965}">
 				<File Id="AppLaunchPoCMainApp.exe" Source="$(var.AppLaunchPoCMainApp_TargetDir)" />
-				<RegistryKey Root="HKCR"
-					  Key="customProtocol"
-					  Action="createAndRemoveOnUninstall">
-					<RegistryValue Type="string" Name="URL Protocol" Value=""/>
-					<RegistryValue Type="string" Value="URL:customProtocol"/>
+				<RegistryKey Root="HKCR" Key="customProtocol" Action="createAndRemoveOnUninstall">
+					<RegistryValue Type="string" Name="URL Protocol" Value="" />
+					<RegistryValue Type="string" Value="URL:customProtocol" />
 					<RegistryKey Key="DefaultIcon">
 						<RegistryValue Type="string" Value="AppLaunchPoCMainApp.exe" />
 					</RegistryKey>
@@ -52,6 +50,12 @@
 			</Component>
 			<Component Id="AppLaunchPoCMainApp.dll" Guid="585ce760-d16c-4e6b-96e6-6595e7cbd9bc">
 			  <File Id="AppLaunchPoCMainApp.dll" Name="AppLaunchPoCMainApp.dll" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.dll" />
+			</Component>
+			<Component Id="WinApp.runtimeconfig.json" Guid="63178745-99c3-424f-855d-675ed2b171f1">
+			  <File Id="WinApp.runtimeconfig.json" Name="WinApp.runtimeconfig.json" Source="$(var.WinApp_TargetDir)WinApp.runtimeconfig.json" />
+			</Component>
+			<Component Id="WinApp.dll" Guid="32a62e58-6cb1-4d39-8878-4fd1ef91a101">
+			  <File Id="WinApp.dll" Name="WinApp.dll" Source="$(var.WinApp_TargetDir)WinApp.dll" />
 			</Component>
 		</ComponentGroup>
 		

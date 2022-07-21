@@ -1,0 +1,7 @@
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\cab1.cab
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\SetupApp.msi
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\SetupApp.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SetupApp.wixproj.BindContentsFileListnull.txt
+obj\Debug\SetupApp.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SetupApp.wixproj.BindBuiltOutputsFileListnull.txt

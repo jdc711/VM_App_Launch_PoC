@@ -4,9 +4,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.10</ProductVersion>
-    <ProjectGuid>98403a5e-92b1-46d5-91de-2d4ac1cbb7a7</ProjectGuid>
+    <ProjectGuid>c1cbb840-ee39-4f3c-9f49-e59f3e15c93d</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>Setup</OutputName>
+    <OutputName>SetupApp</OutputName>
     <OutputType>Package</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -22,12 +22,12 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Setup.wax" />
+    <Content Include="SetupApp.wax" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppLaunchPoCMainApp\AppLaunchPoCMainApp.csproj">
-      <Name>AppLaunchPoCMainApp</Name>
-      <Project>{132e4ac9-c5e2-4615-8905-2d00d093ed88}</Project>
+    <ProjectReference Include="..\WinApp\WinApp.csproj">
+      <Name>WinApp</Name>
+      <Project>{df19a07a-a48b-43d3-8b4b-957aa5183822}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>
       <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>

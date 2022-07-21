@@ -1,0 +1,3 @@
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\bin\Debug\net6.0-windows\WinApp.dll
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\bin\Debug\net6.0-windows\WinApp.exe
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\bin\Debug\net6.0-windows\WinApp.runtimeconfig.json

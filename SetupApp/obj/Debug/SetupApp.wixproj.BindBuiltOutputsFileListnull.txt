@@ -1,0 +1,3 @@
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\cab1.cab
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\SetupApp.msi
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\SetupApp\bin\Debug\SetupApp.wixpdb

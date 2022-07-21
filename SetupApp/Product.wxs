@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define WinApp_TargetDir=$(var.WinApp.TargetDir)?>
+	<Product Id="*" Name="SetupApp" Language="1033" Version="1.0.0.0" Manufacturer="josh" UpgradeCode="a7f504df-a5dd-4ecf-90a5-3184045cfeb0">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SetupApp" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="AppLaunchPoCMainApp" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+			<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="ProductComponent" Guid="{206C911C-56EF-44B8-9257-5FD214427965}">
+				<File Id="WinApp.exe" Source="$(var.WinApp_TargetDir)" />
+				<RegistryKey Root="HKCR" Key="vymv" Action="createAndRemoveOnUninstall">
+					<RegistryValue Type="string" Name="URL Protocol" Value="" />
+					<RegistryValue Type="string" Value="URL:vymv" />
+					<RegistryKey Key="DefaultIcon">
+						<RegistryValue Type="string" Value="WinApp.exe" />
+					</RegistryKey>
+					<RegistryKey Key="shell\open\command">
+						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]WinApp.exe&quot; &quot;%1&quot;" />
+					</RegistryKey>
+				</RegistryKey>
+			</Component>
+
+
+
+			
+			<Component Id="WinApp.runtimeconfig.json" Guid="63178745-99c3-424f-855d-675ed2b171f1">
+				<File Id="WinApp.runtimeconfig.json" Name="WinApp.runtimeconfig.json" Source="$(var.WinApp_TargetDir)WinApp.runtimeconfig.json" />
+			</Component>
+			<Component Id="WinApp.dll" Guid="32a62e58-6cb1-4d39-8878-4fd1ef91a101">
+				<File Id="WinApp.dll" Name="WinApp.dll" Source="$(var.WinApp_TargetDir)WinApp.dll" />
+			</Component>
+		</ComponentGroup>
+
+	</Fragment>
+</Wix>
