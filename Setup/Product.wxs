@@ -32,15 +32,15 @@
 			<Component Id="ProductComponent" Guid="{206C911C-56EF-44B8-9257-5FD214427965}">
 				<File Id="AppLaunchPoCMainApp.exe" Source="$(var.AppLaunchPoCMainApp_TargetDir)" />
 				<RegistryKey Root="HKCR"
-					  Key="protocolname"
+					  Key="customProtocol"
 					  Action="createAndRemoveOnUninstall">
 					<RegistryValue Type="string" Name="URL Protocol" Value=""/>
 					<RegistryValue Type="string" Value="URL:customProtocol"/>
 					<RegistryKey Key="DefaultIcon">
-						<RegistryValue Type="string" Value="MyMainProgram.exe" />
+						<RegistryValue Type="string" Value="AppLaunchPoCMainApp.exe" />
 					</RegistryKey>
 					<RegistryKey Key="shell\open\command">
-						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]MyMainProgram.exe&quot; &quot;%1&quot;" />
+						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]AppLaunchPoCMainApp.exe&quot; &quot;%1&quot;" />
 					</RegistryKey>
 				</RegistryKey>
 			</Component>
