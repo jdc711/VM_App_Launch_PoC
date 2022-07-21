@@ -9,9 +9,8 @@
 		<Feature Id="ProductFeature" Title="Setup" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
 		</Feature>
-		
-		
-		
+
+
 		
 		
 	</Product>
@@ -19,7 +18,7 @@
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="Setup" />
+				<Directory Id="INSTALLFOLDER" Name="AppLaunchPoCMainApp" />
 			</Directory>
 		</Directory>
 	</Fragment>
@@ -30,29 +29,32 @@
 			<!-- <Component Id="ProductComponent"> -->
 				<!-- TODO: Insert files, registry keys, and other resources here. -->
 			<!-- </Component> -->
-			<Component Id="ProductComponent" Guid="">
-				
-				<!--<File Source="$(var.AppLaunchPoCMainApp.TargetPath)" />-->
-				<RegistryKey Root="HKCR" Key="customProtocol">
-					<RegistryValue Type="string" Name="URL Protocol" Value="" />
-					<RegistryValue Type="string" Value="URL:customProtocol" />
+			<Component Id="ProductComponent" Guid="{206C911C-56EF-44B8-9257-5FD214427965}">
+				<File Id="AppLaunchPoCMainApp.exe" Source="$(var.AppLaunchPoCMainApp_TargetDir)" />
+				<RegistryKey Root="HKCR"
+					  Key="protocolname"
+					  Action="createAndRemoveOnUninstall">
+					<RegistryValue Type="string" Name="URL Protocol" Value=""/>
+					<RegistryValue Type="string" Value="URL:customProtocol"/>
 					<RegistryKey Key="DefaultIcon">
-						<RegistryValue Type="string" Value="AppLaunchPoCMainApp.exe" />
+						<RegistryValue Type="string" Value="MyMainProgram.exe" />
 					</RegistryKey>
 					<RegistryKey Key="shell\open\command">
-						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]AppLaunchPoCMainApp.exe&quot; &quot;%1&quot;" />
+						<RegistryValue Type="string" Value="&quot;[INSTALLFOLDER]MyMainProgram.exe&quot; &quot;%1&quot;" />
 					</RegistryKey>
 				</RegistryKey>
 			</Component>
-			<Component Id="AppLaunchPoCMainApp.dll" Guid="">
-			  <File Id="AppLaunchPoCMainApp_.dll" Name="AppLaunchPoCMainApp.dll" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.dll" />
-			</Component>
-			<Component Id="AppLaunchPoCMainApp.runtimeconfig.json" Guid="">
+			
+			
+			
+			<Component Id="AppLaunchPoCMainApp.runtimeconfig.json" Guid="c0f120f1-77d9-4909-ad72-46b7def97172">
 			  <File Id="AppLaunchPoCMainApp.runtimeconfig.json" Name="AppLaunchPoCMainApp.runtimeconfig.json" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.runtimeconfig.json" />
 			</Component>
-			
-			
-			
+			<Component Id="AppLaunchPoCMainApp.dll" Guid="585ce760-d16c-4e6b-96e6-6595e7cbd9bc">
+			  <File Id="AppLaunchPoCMainApp.dll" Name="AppLaunchPoCMainApp.dll" Source="$(var.AppLaunchPoCMainApp_TargetDir)AppLaunchPoCMainApp.dll" />
+			</Component>
 		</ComponentGroup>
+		
+		
 	</Fragment>
 </Wix>

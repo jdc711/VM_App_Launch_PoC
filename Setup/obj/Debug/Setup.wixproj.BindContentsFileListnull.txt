@@ -1,2 +1,3 @@
-C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.runtimeconfig.json
 C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.dll
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.exe
+C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\AppLaunchPoCMainApp\bin\Debug\net6.0\AppLaunchPoCMainApp.runtimeconfig.json
