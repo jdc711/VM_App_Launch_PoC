@@ -1,20 +1,20 @@
 ﻿WinApp
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\obj\Debug\net6.0-windows\
+c:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\obj\Debug\net6.0-windows\
 WinApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\App.xaml
+c:\Users\joshu\veyond_metaverse\projects\AppLaunchPoCMainApp\WinApp\App.xaml
 11407045341
 
-3-1233169557
+51377202287
 1942007414746
 MainWindow.xaml;
 
-False
+True
 
