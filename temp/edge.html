@@ -1,0 +1,121 @@
+<!-- https://github.com/ismailhabib/custom-protocol-detection -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20130526/json2.min.js"></script>
+    
+    
+</head>
+<body>
+
+    <button id="launchFake"> Launch Non-existent Protocol </button>
+    <button id="launchCustom"> Launch Custom Protocol </button>
+
+
+
+    
+    <script>
+        $("#launchFake").click(function(){
+
+           
+            //console.log("hereCustom");
+            function runDownload(){
+                console.log("Detected uninstalled desktop app. download installation setup script + project then run install")
+            }
+            const myTimeout = setTimeout(runDownload, 500);
+            $(window).blur(function(){
+            //console.log('hello bitch');
+            clearTimeout(myTimeout);
+        });
+        
+
+
+
+
+            
+            window.location = "vymy://site.com";
+            
+            //console.log("hereFake");
+
+
+
+         
+
+        });
+        $("#launchCustom").click(function(){
+
+                  
+            window.location = "vymv://site.com";
+
+            //console.log("hereCustom");
+            function runDownload(){
+                console.log("Detected uninstalled desktop app. download installation setup script + project then run install")
+            }
+            const myTimeout = setTimeout(runDownload, 5000);
+            
+            $(window).blur(function(){
+            //console.log('hello bitch');
+            clearTimeout(myTimeout);
+        });
+        
+          
+
+
+        });
+
+      
+    
+    /*
+        checkCustomProtocol - check if custom protocol exists
+        inProtocol - URL of application to run eg: MyApp://
+        inInstallLink - URL to run when the protocol does not exist.
+        inTimeOut - time in miliseconds to wait for application to Launch.
+    */
+//     function checkCustomProtocol(inProtocol,inInstalLink,inTimeOut)
+//     {
+//         // Check if Microsoft Edge
+//         if (navigator.msLaunchUri)
+//         {
+//             navigator.msLaunchUri(inProtocol, function () 
+//                 {
+//                     //It launched, nothing to do
+//                 },
+//             function()
+//                 {
+//                     window.location = inInstalLink; //Launch alternative, typically app download.
+//                 }
+//             );
+//         }
+//         else
+//         {
+//             // Not Edge
+//             var timeout = inTimeOut;
+//             //Set up a listener to see if it navigates away from the page.
+//             // If so we assume the application launched
+//             window.addEventListener('blur',function(e)
+//                 {
+//                     window.clearTimeout(timeout);
+//                 }
+//             )
+//             //Set a timeout so that if the application does not launch within the timeout we 
+//             // assume the protocol does not exist
+//             timeout = window.setTimeout(function() 
+//                     {
+//                       console.log('timeout');
+//                       window.location = inInstalLink; //Try to launch application
+//                     }, inTimeOut
+//                 );
+    
+//             window.location = inProtocol; //Launch alternative, typically app download.
+//         }
+//    }
+
+    </script>
+</body>
+</html>
