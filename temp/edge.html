@@ -10,25 +10,15 @@
 </head>
 <body>
 
-    <button id="launchFake"> Launch Non-existent Protocol </button>
-    <button id="launchCustom"> Launch Custom Protocol </button>
+    <button id="launchCustom"> Launch App </button>
 
     <script>
-        $("#launchFake").click(function(){
-            function runDownload(){
-                console.log("Detected uninstalled desktop app. download installation setup script + project then run install")
-            }
-            const myTimeout = setTimeout(runDownload, 500);
-            $(window).blur(function(){
-                clearTimeout(myTimeout);
-            });
-            window.location = "vymy://site.com";
-        });
-
+       
         $("#launchCustom").click(function(){     
             window.location = "vymv://site.com";
             function runDownload(){
-                console.log("Detected uninstalled desktop app. download installation setup script + project then run install")
+                //console.log("Detected uninstalled desktop app. download installation setup script + project then run install")
+
             }
             const myTimeout = setTimeout(runDownload, 5000);
             $(window).blur(function(){
